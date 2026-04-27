@@ -1,0 +1,2372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eternal Rest Memorial  Compassionate Funeral Services</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+/* ===== CSS VARIABLES ===== */
+:root {
+  --navy:       #1a2540;
+  --navy-dark:  #111827;
+  --navy-light: #243256;
+  --gold:       #b8975a;
+  --gold-light: #d4b07a;
+  --gray-100:   #f7f7f6;
+  --gray-200:   #eeede9;
+  --gray-300:   #d6d4ce;
+  --gray-500:   #8a897f;
+  --gray-700:   #4a4a44;
+  --white:      #ffffff;
+  --text-body:  #3a3933;
+  --shadow-sm:  0 2px 8px rgba(26,37,64,0.08);
+  --shadow-md:  0 6px 24px rgba(26,37,64,0.12);
+  --shadow-lg:  0 16px 48px rgba(26,37,64,0.16);
+  --radius:     4px;
+  --transition: 0.3s ease;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans:  'Lato', sans-serif;
+}
+
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: var(--font-sans);
+  color: var(--text-body);
+  background: var(--white);
+  line-height: 1.7;
+}
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+/* ===== TYPOGRAPHY ===== */
+h1,h2,h3,h4,h5 { font-family: var(--font-serif); font-weight: 400; color: var(--navy); line-height: 1.25; }
+h1 { font-size: clamp(2.4rem, 5vw, 4rem); }
+h2 { font-size: clamp(1.9rem, 3.5vw, 2.8rem); }
+h3 { font-size: clamp(1.3rem, 2.5vw, 1.75rem); }
+h4 { font-size: 1.25rem; }
+p { font-size: 1rem; color: var(--gray-700); }
+.section-label {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+/* ===== LAYOUT ===== */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+.section { padding: 6rem 0; }
+.section--alt { background: var(--gray-100); }
+.section--dark { background: var(--navy); }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+.grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 2rem; }
+.grid-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.75rem; }
+.text-center { text-align: center; }
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mt-4 { margin-top: 2rem; }
+.mt-6 { margin-top: 3rem; }
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.85rem 2rem;
+  font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  border-radius: var(--radius);
+  transition: all var(--transition);
+}
+.btn-primary {
+  background: var(--gold); color: var(--white);
+  box-shadow: 0 4px 16px rgba(184,151,90,0.35);
+}
+.btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(184,151,90,0.48); }
+.btn-outline {
+  background: transparent; color: var(--white);
+  border: 1.5px solid rgba(255,255,255,0.55);
+}
+.btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+.btn-navy { background: var(--navy); color: var(--white); }
+.btn-navy:hover { background: var(--navy-light); transform: translateY(-2px); }
+.btn-sm { padding: 0.6rem 1.25rem; font-size: 0.72rem; }
+
+/* ===== GOLD DIVIDER ===== */
+.gold-line {
+  width: 48px; height: 2px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  margin: 1.25rem auto;
+}
+.gold-line--left { margin-left: 0; }
+
+/* ===== HEADER / NAVBAR ===== */
+#header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: rgba(17,24,39,0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(184,151,90,0.18);
+  transition: box-shadow var(--transition);
+}
+#header.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,0.25); }
+.header-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 1.5rem; height: 72px; max-width: 1400px; margin: 0 auto;
+}
+.logo { display: flex; flex-direction: column; }
+.logo-name {
+  font-family: var(--font-serif); font-size: 1.4rem; font-weight: 300;
+  color: var(--white); letter-spacing: 0.04em;
+}
+.logo-tag { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-top: -2px; }
+nav.main-nav { display: flex; align-items: center; gap: 0.25rem; }
+.nav-link {
+  font-size: 0.78rem; font-weight: 400; letter-spacing: 0.1em;
+  text-transform: uppercase; color: rgba(255,255,255,0.78);
+  padding: 0.5rem 0.85rem; border-radius: var(--radius);
+  transition: color var(--transition);
+}
+.nav-link:hover { color: var(--gold); }
+.header-right { display: flex; align-items: center; gap: 1.25rem; }
+.header-phone {
+  font-size: 0.9rem; font-weight: 700; color: var(--gold);
+  letter-spacing: 0.04em;
+}
+.header-phone:hover { color: var(--gold-light); }
+.btn-emergency {
+  background: var(--gold); color: var(--white);
+  font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; padding: 0.6rem 1.1rem;
+  border-radius: var(--radius); white-space: nowrap;
+  transition: background var(--transition);
+  animation: pulse-gold 2.5s infinite;
+}
+.btn-emergency:hover { background: var(--gold-light); }
+@keyframes pulse-gold {
+  0%,100% { box-shadow: 0 0 0 0 rgba(184,151,90,0.4); }
+  50% { box-shadow: 0 0 0 7px rgba(184,151,90,0); }
+}
+.hamburger { display: none; flex-direction: column; gap: 5px; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: var(--white); transition: all var(--transition); }
+.mobile-nav {
+  display: none; position: fixed; top: 72px; left: 0; right: 0;
+  background: var(--navy-dark); z-index: 999;
+  padding: 1.5rem; border-top: 1px solid rgba(184,151,90,0.2);
+  flex-direction: column; gap: 0.25rem;
+}
+.mobile-nav.open { display: flex; }
+.mobile-nav a {
+  font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase;
+  color: rgba(255,255,255,0.8); padding: 0.75rem 1rem;
+  border-radius: var(--radius); border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.mobile-nav a:hover { color: var(--gold); background: rgba(184,151,90,0.08); }
+
+/* ===== STICKY MOBILE BAR ===== */
+.mobile-sticky {
+  display: none;
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 1001;
+  display: grid; grid-template-columns: 1fr 1fr;
+}
+.mobile-sticky a {
+  display: flex; align-items: center; justify-content: center; gap: 0.4rem;
+  padding: 1rem; font-size: 0.8rem; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--white);
+}
+.mobile-sticky .call-btn { background: var(--navy); }
+.mobile-sticky .help-btn { background: var(--gold); }
+@media (min-width: 769px) { .mobile-sticky { display: none !important; } }
+
+/* ===== PAGE WRAPPER ===== */
+#page { padding-top: 72px; }
+
+/* ===== PAGE SECTIONS (NAVIGATION) ===== */
+.page-section { display: none; }
+.page-section.active { display: block; }
+
+/* ===== HERO ===== */
+.hero {
+  position: relative; min-height: 92vh;
+  display: flex; align-items: center;
+  background: var(--navy-dark);
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background: url('https://images.unsplash.com/photo-1586348943529-beaae6c28db9?w=1600&q=70') center/cover no-repeat;
+  opacity: 0.18;
+}
+.hero-pattern {
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle at 20% 50%, rgba(184,151,90,0.06) 0%, transparent 60%),
+    linear-gradient(160deg, rgba(17,24,39,0.9) 40%, rgba(26,37,64,0.5) 100%);
+}
+.hero-content { position: relative; z-index: 1; max-width: 700px; }
+.hero-eyebrow {
+  display: inline-block; font-size: 0.7rem; font-weight: 700;
+  letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 1.5rem;
+}
+.hero h1 { color: var(--white); margin-bottom: 1.25rem; font-weight: 300; font-style: italic; }
+.hero h1 em { font-style: normal; font-weight: 500; color: var(--gold-light); }
+.hero-sub { font-size: 1.1rem; color: rgba(255,255,255,0.72); max-width: 520px; margin-bottom: 2.5rem; }
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+.hero-trust { display: flex; gap: 2rem; margin-top: 3.5rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.12); }
+.trust-item { display: flex; align-items: center; gap: 0.5rem; }
+.trust-item .icon { font-size: 1.2rem; }
+.trust-item span { font-size: 0.78rem; color: rgba(255,255,255,0.6); letter-spacing: 0.08em; }
+.hero-badge {
+  position: absolute; right: 8%; top: 50%; transform: translateY(-50%);
+  width: 160px; height: 160px; border-radius: 50%;
+  background: rgba(184,151,90,0.12);
+  border: 1.5px solid rgba(184,151,90,0.35);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; padding: 1rem; z-index: 1;
+}
+.hero-badge .big { font-family: var(--font-serif); font-size: 2.5rem; color: var(--gold); line-height: 1; }
+.hero-badge .small { font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.55); margin-top: 0.25rem; }
+
+/* ===== STEPS / WHAT TO DO ===== */
+.steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 3rem; }
+.step-card {
+  background: var(--white); border-radius: 6px;
+  padding: 2rem 1.5rem;
+  box-shadow: var(--shadow-sm);
+  border-top: 3px solid var(--gold);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.step-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.step-num {
+  font-family: var(--font-serif); font-size: 2.5rem; font-weight: 300;
+  color: var(--gold); opacity: 0.6; line-height: 1;
+}
+.step-card h4 { margin: 0.5rem 0; font-size: 1rem; }
+.step-card p { font-size: 0.88rem; }
+
+/* ===== SERVICES CARDS ===== */
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
+.service-card {
+  background: var(--white); border-radius: 8px;
+  overflow: hidden; box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
+  cursor: pointer;
+}
+.service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+.service-card-img {
+  height: 190px;
+  background: var(--gray-200);
+  position: relative; overflow: hidden;
+}
+.service-card-img img { width: 100%; height: 100%; object-fit: cover; }
+.service-icon {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 3rem; background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+}
+.service-card-body { padding: 1.75rem; }
+.service-card-body h3 { font-size: 1.3rem; margin-bottom: 0.5rem; }
+.service-card-body p { font-size: 0.88rem; margin-bottom: 1.25rem; }
+.service-link {
+  font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--gold);
+  display: flex; align-items: center; gap: 0.35rem;
+}
+.service-link:hover { gap: 0.6rem; }
+
+/* ===== WHY CHOOSE US ===== */
+.why-wrap {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;
+}
+.why-visual {
+  position: relative;
+}
+.why-img-frame {
+  width: 100%; aspect-ratio: 4/5;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  border-radius: 8px; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 5rem;
+}
+.why-stat {
+  position: absolute; bottom: -1.5rem; right: -1.5rem;
+  background: var(--gold); color: var(--white);
+  padding: 1.5rem; border-radius: 8px;
+  text-align: center; box-shadow: var(--shadow-md);
+}
+.why-stat .num { font-family: var(--font-serif); font-size: 2.5rem; display: block; line-height: 1; }
+.why-stat .lbl { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.9; }
+.trust-list { margin-top: 2rem; display: flex; flex-direction: column; gap: 1.25rem; }
+.trust-item-row {
+  display: flex; align-items: flex-start; gap: 1rem;
+  padding: 1.25rem; background: var(--gray-100); border-radius: 6px;
+}
+.trust-icon { font-size: 1.5rem; flex-shrink: 0; }
+.trust-text h4 { font-size: 1rem; margin-bottom: 0.2rem; }
+.trust-text p { font-size: 0.85rem; }
+
+/* ===== TESTIMONIALS ===== */
+.testimonials-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2rem; margin-top: 3rem; }
+.testimonial-card {
+  background: var(--white); border-radius: 8px;
+  padding: 2.25rem 2rem; box-shadow: var(--shadow-sm);
+  border-left: 3px solid var(--gold);
+  position: relative;
+}
+.testimonial-card::before {
+  content: '\201C';
+  font-family: var(--font-serif); font-size: 5rem; font-weight: 300;
+  color: var(--gold); opacity: 0.25;
+  position: absolute; top: 0.5rem; left: 1.25rem; line-height: 1;
+}
+.testimonial-card p { font-size: 0.95rem; font-style: italic; margin-bottom: 1.5rem; padding-top: 1rem; }
+.testimonial-author { display: flex; align-items: center; gap: 0.75rem; }
+.author-avatar {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--gray-200); display: flex; align-items: center;
+  justify-content: center; font-size: 1.3rem; flex-shrink: 0;
+}
+.author-name { font-weight: 700; font-size: 0.85rem; color: var(--navy); }
+.author-loc { font-size: 0.78rem; color: var(--gray-500); }
+.stars { color: var(--gold); font-size: 0.85rem; margin-bottom: 0.5rem; }
+
+/* ===== PACKAGES PREVIEW ===== */
+.packages-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2rem; margin-top: 3rem; }
+.package-card {
+  border-radius: 8px; overflow: hidden;
+  border: 1.5px solid var(--gray-300);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.package-card.featured {
+  border-color: var(--gold);
+  box-shadow: var(--shadow-lg);
+  transform: scale(1.03);
+}
+.package-head {
+  padding: 2rem; background: var(--navy); text-align: center;
+}
+.package-card.featured .package-head { background: var(--gold); }
+.package-head h3 { color: var(--white); font-size: 1.3rem; }
+.package-head .price {
+  font-family: var(--font-serif); font-size: 2.5rem; color: var(--white);
+  display: block; margin-top: 0.5rem;
+}
+.package-head .price-note { font-size: 0.78rem; color: rgba(255,255,255,0.6); }
+.package-body { padding: 2rem; }
+.package-body ul { display: flex; flex-direction: column; gap: 0.75rem; }
+.package-body li {
+  display: flex; align-items: center; gap: 0.5rem;
+  font-size: 0.88rem; color: var(--gray-700);
+}
+.package-body li::before { content: '✓'; color: var(--gold); font-weight: 700; flex-shrink: 0; }
+.package-cta { padding: 0 2rem 2rem; }
+
+/* ===== CTA BANNER ===== */
+.cta-banner {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  padding: 5rem 0; text-align: center; position: relative; overflow: hidden;
+}
+.cta-banner::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(184,151,90,0.15) 0%, transparent 70%);
+}
+.cta-banner > * { position: relative; }
+.cta-banner h2 { color: var(--white); margin-bottom: 0.75rem; }
+.cta-banner p { color: rgba(255,255,255,0.65); margin-bottom: 2rem; font-size: 1.05rem; }
+.cta-banner .actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.cta-phone { font-family: var(--font-serif); font-size: 2rem; color: var(--gold); display: block; margin-bottom: 1.5rem; }
+
+/* ===== MAP / CONTACT SNIPPET ===== */
+.contact-snippet { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+.contact-map {
+  background: var(--gray-200); min-height: 360px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2rem; color: var(--gray-500); position: relative; overflow: hidden;
+}
+.map-placeholder {
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, #e8e6e0 0%, #d4d2cc 100%);
+  display: flex; flex-direction: column; align-items: center;
+  justify-content: center; gap: 0.5rem;
+}
+.map-pin { font-size: 3rem; }
+.map-label { font-size: 0.8rem; letter-spacing: 0.1em; color: var(--gray-500); }
+.contact-info {
+  background: var(--navy); padding: 3.5rem;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.contact-info h3 { color: var(--white); margin-bottom: 2rem; }
+.contact-detail { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.5rem; }
+.contact-detail .ic { font-size: 1.3rem; flex-shrink: 0; margin-top: 0.1rem; }
+.contact-detail-text .label { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.2rem; }
+.contact-detail-text .value { color: rgba(255,255,255,0.85); font-size: 0.95rem; }
+.contact-detail-text a { color: var(--gold-light); }
+
+/* ===== SERVICES PAGE ===== */
+.page-hero {
+  background: var(--navy); padding: 5rem 0 4rem;
+  text-align: center; position: relative; overflow: hidden;
+}
+.page-hero::after {
+  content: ''; position: absolute;
+  bottom: 0; left: 50%; transform: translateX(-50%);
+  width: 60%; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+.page-hero h1 { color: var(--white); margin-bottom: 0.75rem; }
+.page-hero p { color: rgba(255,255,255,0.65); max-width: 580px; margin: 0 auto; }
+.breadcrumb {
+  display: flex; align-items: center; justify-content: center;
+  gap: 0.5rem; margin-bottom: 1.5rem;
+}
+.breadcrumb span { font-size: 0.75rem; color: rgba(255,255,255,0.4); letter-spacing: 0.1em; text-transform: uppercase; }
+.breadcrumb a { font-size: 0.75rem; color: var(--gold); text-transform: uppercase; letter-spacing: 0.1em; }
+
+/* ===== INDIVIDUAL SERVICE PAGE ===== */
+.service-page-hero {
+  background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);
+  padding: 5rem 0; position: relative;
+}
+.service-page-content { display: grid; grid-template-columns: 2fr 1fr; gap: 4rem; }
+.service-sidebar {
+  background: var(--gray-100); border-radius: 8px;
+  padding: 2rem; position: sticky; top: 90px; align-self: start;
+}
+.sidebar-title { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--navy); margin-bottom: 1.25rem; }
+.sidebar-links { display: flex; flex-direction: column; gap: 0.25rem; }
+.sidebar-link {
+  padding: 0.75rem 1rem; border-radius: 4px;
+  font-size: 0.88rem; color: var(--gray-700);
+  border-left: 2px solid transparent;
+  transition: all var(--transition);
+}
+.sidebar-link:hover, .sidebar-link.active { border-left-color: var(--gold); color: var(--navy); background: var(--white); }
+.includes-list { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1rem; }
+.include-item {
+  display: flex; align-items: center; gap: 0.75rem;
+  padding: 0.75rem; background: var(--gray-100); border-radius: 4px;
+}
+.include-item span:first-child { font-size: 1.1rem; }
+.include-item span:last-child { font-size: 0.88rem; }
+.addons-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; }
+.addon-item {
+  padding: 1rem; background: var(--white); border: 1px solid var(--gray-300);
+  border-radius: 4px; font-size: 0.85rem; color: var(--gray-700);
+  display: flex; align-items: center; gap: 0.5rem;
+}
+
+/* ===== OBITUARIES ===== */
+.obit-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2rem; margin-top: 3rem; }
+.obit-card {
+  background: var(--white); border-radius: 8px; overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
+  cursor: pointer;
+}
+.obit-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.obit-photo {
+  height: 200px; background: var(--gray-200);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 4rem;
+}
+.obit-body { padding: 1.5rem; }
+.obit-name { font-family: var(--font-serif); font-size: 1.3rem; color: var(--navy); margin-bottom: 0.25rem; }
+.obit-dates { font-size: 0.8rem; letter-spacing: 0.08em; color: var(--gold); margin-bottom: 0.75rem; }
+.obit-excerpt { font-size: 0.88rem; color: var(--gray-700); margin-bottom: 1.25rem; line-height: 1.6; }
+
+/* Individual Obituary */
+.obit-single-header { text-align: center; padding: 4rem 0; }
+.obit-portrait {
+  width: 160px; height: 160px; border-radius: 50%;
+  background: var(--gray-200); display: flex; align-items: center;
+  justify-content: center; font-size: 4.5rem;
+  margin: 0 auto 1.5rem;
+  border: 4px solid var(--gold);
+  box-shadow: var(--shadow-md);
+}
+.obit-single-name { font-size: clamp(2rem, 4vw, 3rem); color: var(--navy); }
+.obit-single-dates { font-size: 1rem; color: var(--gold); letter-spacing: 0.1em; margin-top: 0.5rem; }
+.obit-content { max-width: 760px; margin: 0 auto; }
+.obit-service-details {
+  background: var(--gray-100); border-radius: 8px;
+  padding: 2rem; margin: 2rem 0;
+  border-left: 4px solid var(--gold);
+}
+.obit-service-details h3 { margin-bottom: 1rem; }
+.guestbook { margin-top: 3rem; }
+.guestbook-form { background: var(--gray-100); border-radius: 8px; padding: 2rem; margin-top: 1.5rem; }
+.guestbook-entries { margin-top: 2rem; display: flex; flex-direction: column; gap: 1.5rem; }
+.guestbook-entry {
+  background: var(--white); border-radius: 8px;
+  padding: 1.5rem; box-shadow: var(--shadow-sm);
+  border-left: 3px solid var(--gold);
+}
+.entry-author { font-weight: 700; font-size: 0.9rem; color: var(--navy); }
+.entry-date { font-size: 0.75rem; color: var(--gray-500); margin-bottom: 0.5rem; }
+.entry-text { font-size: 0.9rem; font-style: italic; }
+.obit-cta { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
+
+/* ===== PRE-PLANNING ===== */
+.benefits-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.75rem; margin-top: 3rem; }
+.benefit-card {
+  padding: 2rem; text-align: center;
+  background: var(--white); border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+}
+.benefit-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+.benefit-card h4 { margin-bottom: 0.5rem; }
+.preplanning-steps { counter-reset: step-counter; margin-top: 3rem; display: flex; flex-direction: column; gap: 1.5rem; }
+.pp-step {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  padding: 1.75rem; background: var(--white); border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+}
+.pp-step-num {
+  font-family: var(--font-serif); font-size: 2.5rem; font-weight: 300;
+  color: var(--gold); line-height: 1; flex-shrink: 0; min-width: 50px;
+}
+.pp-step-content h4 { margin-bottom: 0.4rem; }
+.pp-step-content p { font-size: 0.88rem; }
+
+/* ===== FORMS ===== */
+.form-section { background: var(--gray-100); border-radius: 8px; padding: 2.5rem; margin-top: 3rem; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+.form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+.form-group.full { grid-column: 1/-1; }
+label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--navy); }
+input, select, textarea {
+  padding: 0.85rem 1rem; border: 1.5px solid var(--gray-300);
+  border-radius: 4px; font-family: var(--font-sans); font-size: 0.95rem;
+  color: var(--text-body); background: var(--white);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+input:focus, select:focus, textarea:focus {
+  outline: none; border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(184,151,90,0.15);
+}
+textarea { resize: vertical; min-height: 120px; }
+
+/* ===== ABOUT PAGE ===== */
+.story-section { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+.story-img {
+  border-radius: 8px; overflow: hidden;
+  background: linear-gradient(135deg, var(--navy), var(--navy-light));
+  min-height: 420px; display: flex; align-items: center; justify-content: center;
+  font-size: 5rem;
+}
+.values-list { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 1rem; }
+.value-item { display: flex; align-items: flex-start; gap: 1rem; }
+.value-icon { font-size: 1.25rem; margin-top: 0.1rem; }
+.value-text strong { display: block; color: var(--navy); margin-bottom: 0.2rem; font-size: 0.95rem; }
+.value-text span { font-size: 0.85rem; color: var(--gray-700); }
+.staff-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 2rem; margin-top: 3rem; }
+.staff-card {
+  background: var(--white); border-radius: 8px; overflow: hidden;
+  box-shadow: var(--shadow-sm); text-align: center;
+  transition: transform var(--transition);
+}
+.staff-card:hover { transform: translateY(-4px); }
+.staff-photo {
+  height: 200px; background: var(--gray-200);
+  display: flex; align-items: center; justify-content: center; font-size: 3.5rem;
+}
+.staff-body { padding: 1.5rem; }
+.staff-name { font-family: var(--font-serif); font-size: 1.15rem; color: var(--navy); }
+.staff-role { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-top: 0.25rem; }
+.staff-bio { font-size: 0.83rem; color: var(--gray-700); margin-top: 0.75rem; }
+.certs-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5rem; margin-top: 2rem; }
+.cert-badge {
+  background: var(--white); border: 1.5px solid var(--gray-300);
+  border-radius: 8px; padding: 1.5rem; text-align: center;
+}
+.cert-badge .ci { font-size: 2rem; margin-bottom: 0.5rem; }
+.cert-badge p { font-size: 0.78rem; color: var(--gray-700); }
+
+/* ===== CONTACT PAGE ===== */
+.contact-page-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+.hours-table { width: 100%; margin-top: 1rem; border-collapse: collapse; }
+.hours-table td { padding: 0.6rem 0; border-bottom: 1px solid var(--gray-200); font-size: 0.88rem; }
+.hours-table td:last-child { text-align: right; color: var(--navy); font-weight: 700; }
+.emergency-notice {
+  background: var(--navy); border-radius: 8px;
+  padding: 1.75rem; margin-top: 2rem;
+  border-left: 4px solid var(--gold);
+}
+.emergency-notice h4 { color: var(--gold); margin-bottom: 0.5rem; }
+.emergency-notice p { color: rgba(255,255,255,0.8); font-size: 0.88rem; }
+.emergency-notice a { color: var(--gold-light); font-weight: 700; }
+
+/* ===== DEATH OCCURS PAGE ===== */
+.death-steps { display: flex; flex-direction: column; gap: 0; margin-top: 3rem; }
+.death-step {
+  display: grid; grid-template-columns: 80px 1fr; gap: 2rem;
+  padding: 2.5rem 0; border-bottom: 1px solid var(--gray-200);
+}
+.death-step-num {
+  font-family: var(--font-serif); font-size: 3.5rem; font-weight: 300;
+  color: var(--gold); line-height: 1; text-align: center;
+}
+.death-step-body h3 { margin-bottom: 0.5rem; }
+.death-step-body p { font-size: 0.9rem; }
+.docs-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; margin-top: 2rem; }
+.doc-item {
+  background: var(--white); border: 1px solid var(--gray-300);
+  border-radius: 6px; padding: 1rem;
+  display: flex; align-items: center; gap: 0.75rem;
+  font-size: 0.88rem;
+}
+
+/* ===== PRICING PAGE ===== */
+.pricing-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2rem; margin-top: 3rem; }
+.price-card {
+  border-radius: 10px; overflow: hidden;
+  border: 1.5px solid var(--gray-300);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.price-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+.price-card.best {
+  border-color: var(--gold); box-shadow: var(--shadow-lg); transform: scale(1.03);
+}
+.price-head {
+  background: var(--navy); padding: 2.5rem; text-align: center;
+}
+.price-card.best .price-head { background: var(--gold); }
+.price-label { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 0.5rem; }
+.price-name { font-family: var(--font-serif); font-size: 1.75rem; color: var(--white); margin-bottom: 1rem; }
+.price-amount { font-family: var(--font-serif); font-size: 3rem; color: var(--white); }
+.price-amount sup { font-size: 1.5rem; vertical-align: top; margin-top: 0.5rem; display: inline-block; }
+.price-from { font-size: 0.75rem; color: rgba(255,255,255,0.55); letter-spacing: 0.1em; display: block; margin-top: 0.25rem; }
+.price-body { padding: 2.25rem; }
+.price-body ul { display: flex; flex-direction: column; gap: 0.85rem; }
+.price-body li { display: flex; align-items: center; gap: 0.6rem; font-size: 0.88rem; }
+.price-body li .chk { color: var(--gold); font-weight: 700; }
+.price-footer { padding: 0 2.25rem 2.25rem; }
+.price-note { font-size: 0.75rem; color: var(--gray-500); text-align: center; margin-top: 1rem; }
+
+/* ===== LIVESTREAM PAGE ===== */
+.stream-how {
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 2rem; margin-top: 3rem;
+}
+.stream-step {
+  text-align: center; padding: 2rem;
+  background: var(--white); border-radius: 8px; box-shadow: var(--shadow-sm);
+}
+.stream-step-num {
+  width: 52px; height: 52px; border-radius: 50%;
+  background: var(--navy); color: var(--gold);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-serif); font-size: 1.5rem;
+  margin: 0 auto 1rem;
+}
+.platforms { display: flex; gap: 1.5rem; flex-wrap: wrap; margin-top: 2rem; }
+.platform-badge {
+  display: flex; align-items: center; gap: 0.75rem;
+  padding: 1rem 1.5rem; background: var(--white);
+  border: 1.5px solid var(--gray-300); border-radius: 8px;
+  font-weight: 700; font-size: 0.9rem; color: var(--navy);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: var(--navy-dark); padding: 5rem 0 2rem;
+  border-top: 1px solid rgba(184,151,90,0.2);
+}
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.08); }
+.footer-brand .logo-name { font-size: 1.6rem; }
+.footer-tagline { font-size: 0.85rem; color: rgba(255,255,255,0.48); margin-top: 0.5rem; max-width: 260px; line-height: 1.6; }
+.footer-contact-items { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; }
+.footer-contact-item { display: flex; align-items: center; gap: 0.6rem; font-size: 0.85rem; color: rgba(255,255,255,0.6); }
+.footer-contact-item a { color: var(--gold-light); }
+.footer-col h5 { font-family: var(--font-sans); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem; }
+.footer-col ul { display: flex; flex-direction: column; gap: 0.5rem; }
+.footer-col ul li a { font-size: 0.85rem; color: rgba(255,255,255,0.55); transition: color var(--transition); }
+.footer-col ul li a:hover { color: var(--gold); }
+.social-links { display: flex; gap: 0.75rem; margin-top: 1.25rem; }
+.social-link {
+  width: 38px; height: 38px; border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.2);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; color: rgba(255,255,255,0.55);
+  transition: all var(--transition);
+}
+.social-link:hover { border-color: var(--gold); color: var(--gold); }
+.footer-bottom {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-top: 2rem; flex-wrap: wrap; gap: 1rem;
+}
+.footer-bottom p { font-size: 0.78rem; color: rgba(255,255,255,0.3); }
+.footer-legal { display: flex; gap: 1.5rem; }
+.footer-legal a { font-size: 0.78rem; color: rgba(255,255,255,0.3); }
+.footer-legal a:hover { color: var(--gold); }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .grid-4, .staff-grid, .certs-grid { grid-template-columns: repeat(2,1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+}
+@media (max-width: 768px) {
+  .section { padding: 4rem 0; }
+  main.mobile-sticky { display: grid; }
+  nav.main-nav, .header-right .header-phone { display: none; }
+  .hamburger { display: flex; }
+  .hero-badge { display: none; }
+  .hero-trust { flex-direction: column; gap: 1rem; }
+  .grid-2, .grid-3, .services-grid, .steps-grid, .packages-grid,
+  .obit-grid, .benefits-grid, .staff-grid, .certs-grid,
+  .contact-snippet, .contact-page-grid, .stream-how,
+  .testimonials-grid, .pricing-grid, .story-section, .why-wrap {
+    grid-template-columns: 1fr;
+  }
+  .grid-4 { grid-template-columns: 1fr 1fr; }
+  .service-page-content { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+  .package-card.featured, .price-card.best { transform: none; }
+  .why-stat { right: 0; bottom: 0; }
+  .form-grid { grid-template-columns: 1fr; }
+  .addons-grid { grid-template-columns: 1fr; }
+  .death-step { grid-template-columns: 60px 1fr; gap: 1rem; }
+  .docs-grid { grid-template-columns: 1fr; }
+  .hero-actions { flex-direction: column; }
+  .contact-info { padding: 2rem 1.5rem; }
+  .header-right .btn-emergency { font-size: 0.6rem; padding: 0.5rem 0.75rem; }
+}
+@media (max-width: 480px) {
+  .grid-4 { grid-template-columns: 1fr; }
+  .packages-grid, .pricing-grid, .benefits-grid, .stream-how { grid-template-columns: 1fr; }
+  .steps-grid { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header id="header">
+  <div class="header-inner">
+    <a href="#" class="logo" onclick="showPage('home')">
+      <span class="logo-name">Eternal Rest Memorial</span>
+      <span class="logo-tag">Funeral Home &amp; Cremation</span>
+    </a>
+    <nav class="main-nav">
+      <a class="nav-link" href="#" onclick="showPage('home')">Home</a>
+      <a class="nav-link" href="#" onclick="showPage('services')">Services</a>
+      <a class="nav-link" href="#" onclick="showPage('obituaries')">Obituaries</a>
+      <a class="nav-link" href="#" onclick="showPage('preplanning')">Pre-Planning</a>
+      <a class="nav-link" href="#" onclick="showPage('about')">About</a>
+      <a class="nav-link" href="#" onclick="showPage('contact')">Contact</a>
+    </nav>
+    <div class="header-right">
+      <a class="header-phone" href="tel:+18005551234">📞 951 251 1474</a>
+      <a class="btn-emergency" href="tel:+18005551234">Immediate Assistance 24/7</a>
+      <button class="hamburger" id="menuToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="#" onclick="showPage('home');closeMobile()">Home</a>
+    <a href="#" onclick="showPage('services');closeMobile()">Services</a>
+    <a href="#" onclick="showPage('obituaries');closeMobile()">Obituaries</a>
+    <a href="#" onclick="showPage('preplanning');closeMobile()">Pre-Planning</a>
+    <a href="#" onclick="showPage('about');closeMobile()">About</a>
+    <a href="#" onclick="showPage('contact');closeMobile()">Contact</a>
+    <a href="tel:+18005551234" style="color:var(--gold);font-weight:700;">📞 951 251 1474</a>
+  </nav>
+</header>
+
+<!-- ===== MOBILE STICKY BAR ===== -->
+<div class="mobile-sticky">
+  <a href="tel:+18005551234" class="call-btn">📞 Call Now</a>
+  <a href="#" class="help-btn" onclick="showPage('contact')">🆘 Get Help Now</a>
+</div>
+
+<!-- ===== MAIN CONTENT ===== -->
+<div id="page">
+
+<!-- ============================================================
+     HOME PAGE
+     ============================================================ -->
+<section class="page-section active" id="pg-home">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-pattern"></div>
+    <div class="container" style="position:relative;z-index:1;">
+      <div class="hero-content">
+        <span class="hero-eyebrow">Serving Families Since 1978</span>
+        <h1>Compassionate Care<br><em>When You Need It Most</em></h1>
+        <p class="hero-sub">Available 24 hours a day, 7 days a week because loss doesn't follow a schedule. We are here to guide you with dignity and compassion through every step.</p>
+        <div class="hero-actions">
+          <a href="tel:+18005551234" class="btn btn-primary">📞 Call Now</a>
+          <a href="#" class="btn btn-outline" onclick="showPage('contact')">Get Immediate Help</a>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-item"><span class="icon">🏛️</span><span>Licensed &amp; Accredited</span></div>
+          <div class="trust-item"><span class="icon">🕊️</span><span>48+ Years of Service</span></div>
+          <div class="trust-item"><span class="icon">⭐</span><span>5-Star Rated</span></div>
+          <div class="trust-item"><span class="icon">🔒</span><span>Trusted by 10,000+ Families</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-badge">
+      <span class="big">48</span>
+      <span class="small">Years<br>Serving<br>Families</span>
+    </div>
+  </div>
+
+  <!-- What to Do When a Death Occurs -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Immediate Guidance</span>
+        <h2>What To Do When A Death Occurs</h2>
+        <div class="gold-line"></div>
+        <p style="max-width:580px;margin:0 auto 0.5rem;">We understand this is an overwhelming time. Here are the first steps to take — and we are just one call away.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <h4>Stay Calm &amp; Safe</h4>
+          <p>Ensure all family members are in a safe place. There is no rush take the time you need.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <h4>Notify Authorities</h4>
+          <p>Call 911 if the death was unexpected. For expected deaths under hospice, call the hospice nurse.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <h4>Call Us 24/7</h4>
+          <p>Contact Eternal Rest Memorial at <a href="tel:+18005551234" style="color:var(--gold);">951 251 1474</a>. We will guide you through every next step.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">04</div>
+          <h4>We Handle The Rest</h4>
+          <p>Our compassionate team will coordinate transportation, documentation, and all arrangements.</p>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <a href="#" class="btn btn-navy" onclick="showPage('death-occurs')">Full Step-by-Step Guide →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Our Services</span>
+        <h2>How We Can Help</h2>
+        <div class="gold-line"></div>
+        <p style="max-width:540px;margin:0 auto;">We offer a full range of compassionate services to honor every life in a meaningful way.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card" onclick="showPage('service-burial')">
+          <div class="service-card-img"><div class="service-icon">⚰️</div></div>
+          <div class="service-card-body">
+            <h3>Burial Services</h3>
+            <p>Traditional ground burial with dignified ceremonies, casket selection, and cemetery coordination.</p>
+            <span class="service-link">Learn More →</span>
+          </div>
+        </div>
+        <div class="service-card" onclick="showPage('service-cremation')">
+          <div class="service-card-img"><div class="service-icon">🕊️</div></div>
+          <div class="service-card-body">
+            <h3>Cremation Services</h3>
+            <p>Dignified cremation options including direct cremation, cremation with ceremony, and urn selection.</p>
+            <span class="service-link">Learn More →</span>
+          </div>
+        </div>
+        <div class="service-card" onclick="showPage('service-memorial')">
+          <div class="service-card-img"><div class="service-icon">🌸</div></div>
+          <div class="service-card-body">
+            <h3>Funeral &amp; Memorial Services</h3>
+            <p>Personalized memorial ceremonies that celebrate life and bring families together in remembrance.</p>
+            <span class="service-link">Learn More →</span>
+          </div>
+        </div>
+        <div class="service-card" onclick="showPage('service-transport')">
+          <div class="service-card-img"><div class="service-icon">✈️</div></div>
+          <div class="service-card-body">
+            <h3>Transportation &amp; Repatriation</h3>
+            <p>Local and international transportation coordination for domestic and international transfers.</p>
+            <span class="service-link">Learn More →</span>
+          </div>
+        </div>
+        <div class="service-card" onclick="showPage('service-embalming')">
+          <div class="service-card-img"><div class="service-icon">💐</div></div>
+          <div class="service-card-body">
+            <h3>Embalming &amp; Preparation</h3>
+            <p>Professional preparation with care and respect, ensuring your loved one looks their best.</p>
+            <span class="service-link">Learn More →</span>
+          </div>
+        </div>
+        <div class="service-card" onclick="showPage('livestream')">
+          <div class="service-card-img"><div class="service-icon">📡</div></div>
+          <div class="service-card-body">
+            <h3>Live Streaming Services</h3>
+            <p>Allow loved ones worldwide to participate in services through professional live broadcast.</p>
+            <span class="service-link">Learn More →</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- Why Choose Us -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="why-wrap">
+        <div class="why-visual">
+          <div class="why-img-frame" style="font-size:0;padding:0;"><img src="logo.jpg" alt="Eternal Rest Memorial" style="width:100%;height:100%;object-fit:cover;border-radius:8px;"></div>
+          <div class="why-stat">
+            <span class="num">10K+</span>
+            <span class="lbl">Families<br>Served</span>
+          </div>
+        </div>
+        <div>
+          <span class="section-label">Why Choose Us</span>
+          <h2>A Legacy of Trust &amp; Compassion</h2>
+          <div class="gold-line gold-line--left"></div>
+          <p>For over 45 years, Eternal Rest Memorial has been the most trusted funeral home in the region guiding families with integrity, care, and personalized service at every turn.</p>
+          <div class="trust-list">
+            <div class="trust-item-row">
+              <span class="trust-icon">🏅</span>
+              <div class="trust-text">
+                <h4>Licensed &amp; Fully Accredited</h4>
+                <p>State-licensed funeral directors and embalmers with NFDA accreditation and continuous education.</p>
+              </div>
+            </div>
+            <div class="trust-item-row">
+              <span class="trust-icon">🕐</span>
+              <div class="trust-text">
+                <h4>Available 24 Hours, 7 Days a Week</h4>
+                <p>Our compassionate team is always available day, night, weekends, and holidays.</p>
+              </div>
+            </div>
+            <div class="trust-item-row">
+              <span class="trust-icon">💛</span>
+              <div class="trust-text">
+                <h4>Personalized, Family-Centered Care</h4>
+                <p>Every family is unique. We tailor every service to honor your loved one's life and your wishes.</p>
+              </div>
+            </div>
+            <div class="trust-item-row">
+              <span class="trust-icon">💰</span>
+              <div class="trust-text">
+                <h4>Transparent, Honest Pricing</h4>
+                <p>No hidden fees. Clear itemized pricing so you can make informed decisions with confidence.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Families We've Served</span>
+        <h2>Words From Those We've Helped</h2>
+        <div class="gold-line"></div>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Eternal Rest Memorial was there for our family every step of the way after we lost our mother. Their kindness and professionalism made an impossible time a little easier to bear."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">👩</div>
+            <div>
+              <div class="author-name">Margaret H.</div>
+              <div class="author-loc">Portland, OR</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"From the very first phone call, we felt truly cared for. They handled every detail with such grace. I cannot thank them enough for honoring our father's life so beautifully."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">👨</div>
+            <div>
+              <div class="author-name">Robert &amp; Linda T.</div>
+              <div class="author-loc">Eugene, OR</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"The live streaming service allowed our relatives overseas to attend the service. It meant so much to our entire family. The team was wonderful throughout everything."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">👩</div>
+            <div>
+              <div class="author-name">Sarah K.</div>
+              <div class="author-loc">Salem, OR</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Packages Preview -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Service Packages</span>
+        <h2>Clear, Honest Pricing</h2>
+        <div class="gold-line"></div>
+        <p style="max-width:540px;margin:0 auto;">Choose a package that fits your needs and budget, with no hidden fees or surprises.</p>
+      </div>
+      <div class="packages-grid">
+        <div class="package-card">
+          <div class="package-head">
+            <h3>Essential Care</h3>
+            <span class="price">$1,595</span>
+            <span class="price-note">Starting from</span>
+          </div>
+          <div class="package-body">
+            <ul>
+              <li>Direct cremation</li>
+              <li>Transportation of deceased</li>
+              <li>Death certificate filing</li>
+              <li>Basic urn included</li>
+              <li>24/7 family support</li>
+            </ul>
+          </div>
+          <div class="package-cta"><a href="tel:+18005551234" class="btn btn-navy" style="width:100%;justify-content:center;">Contact Us</a></div>
+        </div>
+        <div class="package-card featured">
+          <div class="package-head">
+            <h3>Traditional Service</h3>
+            <span class="price">$4,250</span>
+            <span class="price-note">Most Popular</span>
+          </div>
+          <div class="package-body">
+            <ul>
+              <li>Full funeral ceremony</li>
+              <li>Casket selection (mid-range)</li>
+              <li>Visitation / viewing</li>
+              <li>Cemetery coordination</li>
+              <li>Death certificate (3 copies)</li>
+              <li>Clergy / officiant coordination</li>
+              <li>Obituary placement</li>
+            </ul>
+          </div>
+          <div class="package-cta"><a href="tel:+18005551234" class="btn btn-primary" style="width:100%;justify-content:center;">Contact Us</a></div>
+        </div>
+        <div class="package-card">
+          <div class="package-head">
+            <h3>Premium Tribute</h3>
+            <span class="price">$8,500</span>
+            <span class="price-note">Starting from</span>
+          </div>
+          <div class="package-body">
+            <ul>
+              <li>Everything in Traditional</li>
+              <li>Premium casket selection</li>
+              <li>Live streaming service</li>
+              <li>Floral arrangements</li>
+              <li>Memorial video slideshow</li>
+              <li>Catering coordination</li>
+              <li>Grief support resources</li>
+            </ul>
+          </div>
+          <div class="package-cta"><a href="tel:+18005551234" class="btn btn-navy" style="width:100%;justify-content:center;">Contact Us</a></div>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <a href="#" class="btn btn-outline btn-navy" onclick="showPage('pricing')" style="border-color:var(--navy);color:var(--navy);">View Full Pricing Details →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <div class="cta-banner">
+    <div class="container">
+      <span class="section-label" style="display:block;text-align:center;">24/7 Availability</span>
+      <h2>We Are Here For You, Day or Night</h2>
+      <p>No family should face this alone. Call us anytime — our compassionate team is always ready to help.</p>
+      <a class="cta-phone" href="tel:+18005551234">951 251 1474</a>
+      <div class="actions">
+        <a href="tel:+18005551234" class="btn btn-primary">📞 Call Now</a>
+        <a href="#" class="btn btn-outline" onclick="showPage('contact')">Send Us a Message</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Snippet -->
+  <div class="contact-snippet">
+
+    <div class="contact-info">
+      <h3>Find Us</h3>
+      
+      <div class="contact-detail">
+        <span class="ic">📞</span>
+        <div class="contact-detail-text">
+          <div class="label">Phone</div>
+          <div class="value"><a href="tel:+18005551234">951 251 1474</a></div>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <span class="ic">✉️</span>
+        <div class="contact-detail-text">
+          <div class="label">Email</div>
+          <div class="value"><a href="mailto:support@eternalrestmemorial.com">support@eternalrestmemorial.com</a></div>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <span class="ic">🕐</span>
+        <div class="contact-detail-text">
+          <div class="label">Hours</div>
+          <div class="value">Open 24 Hours / 7 Days a Week</div>
+        </div>
+      </div>
+      <div class="mt-4">
+        <a href="#" class="btn btn-primary" onclick="showPage('contact')">Get Directions →</a>
+      </div>
+    </div>
+  </div>
+
+</section><!-- /home -->
+
+
+<!-- ============================================================
+     SERVICES PAGE
+     ============================================================ -->
+<section class="page-section" id="pg-services">
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="#" onclick="showPage('home')">Home</a><span>/</span><span>Services</span></div>
+      <h1>Our Services</h1>
+      <div class="gold-line"></div>
+      <p>From traditional burial to personalized memorial ceremonies, we offer complete funeral services with dignity and care for every family.</p>
+    </div>
+  </div>
+  <section class="section">
+    <div class="container">
+      <div class="services-grid">
+        <div class="service-card" onclick="showPage('service-burial')">
+          <div class="service-card-img"><div class="service-icon">⚰️</div></div>
+          <div class="service-card-body">
+            <h3>Burial Services</h3>
+            <p>Traditional ground burial with dignified ceremonies, casket selection, and full cemetery coordination including graveside services.</p>
+            <span class="service-link">Learn More →</span>
+          </div>
+        </div>
+        <div class="service-card" onclick="showPage('service-cremation')">
+          <div class="service-card-img"><div class="service-icon">🕊️</div></div>
+          <div class="service-card-body">
+            <h3>Cremation Services</h3>
+            <p>Dignified cremation with multiple options including direct cremation, cremation with ceremony, and personalized urn selection.</p>
+            <span class="service-link">Learn More →</span>
+          </div>
+        </div>
+        <div class="service-card" onclick="showPage('service-memorial')">
+          <div class="service-card-img"><div class="service-icon">🌸</div></div>
+          <div class="service-card-body">
+            <h3>Funeral &amp; Memorial Services</h3>
+            <p>Personalized memorial ceremonies in our chapels or at a location of your choosing that truly celebrate a life well-lived.</p>
+            <span class="service-link">Learn More →</span>
+          </div>
+        </div>
+        <div class="service-card" onclick="showPage('service-transport')">
+          <div class="service-card-img"><div class="service-icon">✈️</div></div>
+          <div class="service-card-body">
+            <h3>Transportation &amp; Repatriation</h3>
+            <p>Local and international transportation coordination we handle every logistical detail with professionalism and care.</p>
+            <span class="service-link">Learn More →</span>
+          </div>
+        </div>
+        <div class="service-card" onclick="showPage('service-embalming')">
+          <div class="service-card-img"><div class="service-icon">💐</div></div>
+          <div class="service-card-body">
+            <h3>Embalming &amp; Preparation</h3>
+            <p>Professional preparation services ensuring your loved one is presented with the utmost care, dignity, and respect.</p>
+            <span class="service-link">Learn More →</span>
+          </div>
+        </div>
+        <div class="service-card" onclick="showPage('livestream')">
+          <div class="service-card-img"><div class="service-icon">📡</div></div>
+          <div class="service-card-body">
+            <h3>Live Streaming Services</h3>
+            <p>Allow family and friends around the world to participate in the service through our professional live broadcast.</p>
+            <span class="service-link">Learn More →</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="cta-banner">
+    <div class="container">
+      <h2>Have Questions About Our Services?</h2>
+      <p>Our team is available 24/7 to answer your questions and help you through every step.</p>
+      <div class="actions mt-3">
+        <a href="tel:+18005551234" class="btn btn-primary">📞 951 251 1474</a>
+        <a href="#" class="btn btn-outline" onclick="showPage('contact')">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     INDIVIDUAL SERVICE: BURIAL
+     ============================================================ -->
+<section class="page-section" id="pg-service-burial">
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="#" onclick="showPage('home')">Home</a><span>/</span><a href="#" onclick="showPage('services')">Services</a><span>/</span><span>Burial</span></div>
+      <h1>Burial Services</h1>
+      <div class="gold-line"></div>
+      <p>Honoring your loved one with a dignified, traditional burial ceremony that brings family and community together in remembrance.</p>
+    </div>
+  </div>
+  <section class="section">
+    <div class="container">
+      <div class="service-page-content">
+        <div>
+          <span class="section-label">Overview</span>
+          <h2>A Timeless Farewell</h2>
+          <div class="gold-line gold-line--left"></div>
+          <p>Traditional burial services offer a meaningful and time-honored way to say goodbye. At Eternal Rest Memorial, we guide your family through every aspect of the burial process — from casket selection and ceremony planning to cemetery coordination and graveside services.</p>
+          <p class="mt-2">Our experienced funeral directors work closely with local and regional cemeteries to ensure a seamless experience that honors your loved one's memory with the dignity they deserve.</p>
+
+          <h3 class="mt-4">What's Included</h3>
+          <div class="includes-list">
+            <div class="include-item"><span>✅</span><span>Professional funeral director oversight</span></div>
+            <div class="include-item"><span>✅</span><span>Casket selection consultation (wide range available)</span></div>
+            <div class="include-item"><span>✅</span><span>Transportation of the deceased</span></div>
+            <div class="include-item"><span>✅</span><span>Embalming and body preparation</span></div>
+            <div class="include-item"><span>✅</span><span>Visitation / viewing at our facility</span></div>
+            <div class="include-item"><span>✅</span><span>Funeral ceremony (chapel or graveside)</span></div>
+            <div class="include-item"><span>✅</span><span>Cemetery coordination and burial oversight</span></div>
+            <div class="include-item"><span>✅</span><span>Death certificate filing (3 certified copies)</span></div>
+            <div class="include-item"><span>✅</span><span>Obituary assistance and placement</span></div>
+            <div class="include-item"><span>✅</span><span>24/7 family support and guidance</span></div>
+          </div>
+
+          <h3 class="mt-4">Optional Add-Ons</h3>
+          <div class="addons-grid">
+            <div class="addon-item">🌹 Floral arrangements</div>
+            <div class="addon-item">📺 Live streaming</div>
+            <div class="addon-item">🎵 Music selection &amp; performance</div>
+            <div class="addon-item">📷 Memorial slideshow</div>
+            <div class="addon-item">🕯️ Candle tribute</div>
+            <div class="addon-item">🍽️ Reception catering</div>
+            <div class="addon-item">📚 Memorial keepsakes</div>
+            <div class="addon-item">✈️ Out-of-state transport</div>
+          </div>
+
+          <div class="mt-6">
+            <a href="tel:+18005551234" class="btn btn-primary">📞 Call Now to Begin Arrangements</a>
+          </div>
+        </div>
+        <div>
+          <div class="service-sidebar">
+            <div class="sidebar-title">Our Services</div>
+            <div class="sidebar-links">
+              <a class="sidebar-link active" href="#" onclick="showPage('service-burial')">⚰️ Burial Services</a>
+              <a class="sidebar-link" href="#" onclick="showPage('service-cremation')">🕊️ Cremation Services</a>
+              <a class="sidebar-link" href="#" onclick="showPage('service-memorial')">🌸 Funeral &amp; Memorial</a>
+              <a class="sidebar-link" href="#" onclick="showPage('service-transport')">✈️ Transportation</a>
+              <a class="sidebar-link" href="#" onclick="showPage('service-embalming')">💐 Embalming</a>
+              <a class="sidebar-link" href="#" onclick="showPage('livestream')">📡 Live Streaming</a>
+            </div>
+            <div style="margin-top:2rem;padding:1.5rem;background:var(--navy);border-radius:6px;text-align:center;">
+              <p style="color:rgba(255,255,255,0.75);font-size:0.85rem;margin-bottom:1rem;">Need immediate assistance?</p>
+              <a href="tel:+18005551234" class="btn btn-primary btn-sm" style="width:100%;justify-content:center;">📞 951 251 1474</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- ============================================================
+     INDIVIDUAL SERVICE: CREMATION
+     ============================================================ -->
+<section class="page-section" id="pg-service-cremation">
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="#" onclick="showPage('home')">Home</a><span>/</span><a href="#" onclick="showPage('services')">Services</a><span>/</span><span>Cremation</span></div>
+      <h1>Cremation Services</h1>
+      <div class="gold-line"></div>
+      <p>Dignified, respectful cremation services with a full range of options to honor your loved one's wishes and your family's needs.</p>
+    </div>
+  </div>
+  <section class="section">
+    <div class="container">
+      <div class="service-page-content">
+        <div>
+          <span class="section-label">Overview</span>
+          <h2>A Meaningful, Dignified Choice</h2>
+          <div class="gold-line gold-line--left"></div>
+          <p>Cremation is an increasingly chosen option that offers families flexibility in how and when they hold a memorial. Whether you choose a simple, direct cremation or a full ceremony preceding cremation, Eternal Rest Memorial ensures every step is handled with the highest level of care and professionalism.</p>
+          <p class="mt-2">We offer a variety of urn options, memorial keepsakes, and scattering services to help create a lasting tribute to your loved one.</p>
+          <h3 class="mt-4">What's Included</h3>
+          <div class="includes-list">
+            <div class="include-item"><span>✅</span><span>Licensed crematory technicians</span></div>
+            <div class="include-item"><span>✅</span><span>Transportation of the deceased</span></div>
+            <div class="include-item"><span>✅</span><span>Individual, identified cremation process</span></div>
+            <div class="include-item"><span>✅</span><span>Death certificate filing (3 certified copies)</span></div>
+            <div class="include-item"><span>✅</span><span>Basic urn (upgrades available)</span></div>
+            <div class="include-item"><span>✅</span><span>Optional ceremony before or after cremation</span></div>
+            <div class="include-item"><span>✅</span><span>24/7 family support</span></div>
+          </div>
+          <h3 class="mt-4">Optional Add-Ons</h3>
+          <div class="addons-grid">
+            <div class="addon-item">🏺 Premium urn selection</div>
+            <div class="addon-item">💎 Memorial jewelry</div>
+            <div class="addon-item">🌊 Scattering ceremony</div>
+            <div class="addon-item">📡 Live streaming</div>
+            <div class="addon-item">🌸 Memorial ceremony</div>
+            <div class="addon-item">📷 Memorial slideshow</div>
+          </div>
+          <div class="mt-6">
+            <a href="tel:+18005551234" class="btn btn-primary">📞 Call Now for Cremation Guidance</a>
+          </div>
+        </div>
+        <div>
+          <div class="service-sidebar">
+            <div class="sidebar-title">Our Services</div>
+            <div class="sidebar-links">
+              <a class="sidebar-link" href="#" onclick="showPage('service-burial')">⚰️ Burial Services</a>
+              <a class="sidebar-link active" href="#" onclick="showPage('service-cremation')">🕊️ Cremation Services</a>
+              <a class="sidebar-link" href="#" onclick="showPage('service-memorial')">🌸 Funeral &amp; Memorial</a>
+              <a class="sidebar-link" href="#" onclick="showPage('service-transport')">✈️ Transportation</a>
+              <a class="sidebar-link" href="#" onclick="showPage('service-embalming')">💐 Embalming</a>
+              <a class="sidebar-link" href="#" onclick="showPage('livestream')">📡 Live Streaming</a>
+            </div>
+            <div style="margin-top:2rem;padding:1.5rem;background:var(--navy);border-radius:6px;text-align:center;">
+              <p style="color:rgba(255,255,255,0.75);font-size:0.85rem;margin-bottom:1rem;">Available 24/7</p>
+              <a href="tel:+18005551234" class="btn btn-primary btn-sm" style="width:100%;justify-content:center;">📞 951 251 1474</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- ============================================================
+     INDIVIDUAL SERVICE: MEMORIAL
+     ============================================================ -->
+<section class="page-section" id="pg-service-memorial">
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="#" onclick="showPage('home')">Home</a><span>/</span><a href="#" onclick="showPage('services')">Services</a><span>/</span><span>Memorial Services</span></div>
+      <h1>Funeral &amp; Memorial Services</h1>
+      <div class="gold-line"></div>
+      <p>Personalized ceremonies that celebrate a life lived fully, bringing family and community together in a meaningful tribute.</p>
+    </div>
+  </div>
+  <section class="section">
+    <div class="container">
+      <div class="service-page-content">
+        <div>
+          <span class="section-label">Overview</span>
+          <h2>Celebrating a Life Well-Lived</h2>
+          <div class="gold-line gold-line--left"></div>
+          <p>A memorial service is one of the most personal and meaningful ways to honor a loved one's life. Our experienced team works closely with your family to design a service that reflects the unique personality, passions, and legacy of the person you've lost.</p>
+          <h3 class="mt-4">What's Included</h3>
+          <div class="includes-list">
+            <div class="include-item"><span>✅</span><span>Chapel or venue arrangement</span></div>
+            <div class="include-item"><span>✅</span><span>Officiant / clergy coordination</span></div>
+            <div class="include-item"><span>✅</span><span>Audio / visual memorial presentation</span></div>
+            <div class="include-item"><span>✅</span><span>Printed memorial programs</span></div>
+            <div class="include-item"><span>✅</span><span>Guest register book</span></div>
+            <div class="include-item"><span>✅</span><span>Music coordination</span></div>
+            <div class="include-item"><span>✅</span><span>Family liaison throughout service</span></div>
+          </div>
+          <h3 class="mt-4">Optional Add-Ons</h3>
+          <div class="addons-grid">
+            <div class="addon-item">📡 Live streaming</div>
+            <div class="addon-item">🌹 Floral tributes</div>
+            <div class="addon-item">🎵 Live music</div>
+            <div class="addon-item">🍽️ Reception catering</div>
+            <div class="addon-item">🕯️ Candlelight tribute</div>
+            <div class="addon-item">🎨 Custom memorial art</div>
+          </div>
+          <div class="mt-6">
+            <a href="tel:+18005551234" class="btn btn-primary">📞 Plan a Memorial Service</a>
+          </div>
+        </div>
+        <div>
+          <div class="service-sidebar">
+            <div class="sidebar-title">Our Services</div>
+            <div class="sidebar-links">
+              <a class="sidebar-link" href="#" onclick="showPage('service-burial')">⚰️ Burial Services</a>
+              <a class="sidebar-link" href="#" onclick="showPage('service-cremation')">🕊️ Cremation Services</a>
+              <a class="sidebar-link active" href="#" onclick="showPage('service-memorial')">🌸 Funeral &amp; Memorial</a>
+              <a class="sidebar-link" href="#" onclick="showPage('service-transport')">✈️ Transportation</a>
+              <a class="sidebar-link" href="#" onclick="showPage('service-embalming')">💐 Embalming</a>
+              <a class="sidebar-link" href="#" onclick="showPage('livestream')">📡 Live Streaming</a>
+            </div>
+            <div style="margin-top:2rem;padding:1.5rem;background:var(--navy);border-radius:6px;text-align:center;">
+              <p style="color:rgba(255,255,255,0.75);font-size:0.85rem;margin-bottom:1rem;">Need immediate assistance?</p>
+              <a href="tel:+18005551234" class="btn btn-primary btn-sm" style="width:100%;justify-content:center;">📞 951 251 1474</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- ============================================================
+     INDIVIDUAL SERVICE: TRANSPORT
+     ============================================================ -->
+<section class="page-section" id="pg-service-transport">
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="#" onclick="showPage('home')">Home</a><span>/</span><a href="#" onclick="showPage('services')">Services</a><span>/</span><span>Transportation</span></div>
+      <h1>Transportation &amp; Repatriation</h1>
+      <div class="gold-line"></div>
+      <p>Professional local and international transportation, ensuring your loved one is cared for every mile of the journey.</p>
+    </div>
+  </div>
+  <section class="section">
+    <div class="container">
+      <div class="service-page-content">
+        <div>
+          <span class="section-label">Overview</span>
+          <h2>Seamless Care, Any Distance</h2>
+          <div class="gold-line gold-line--left"></div>
+          <p>When a loved one passes away away from home across state lines or internationally coordinating transportation is a complex and emotionally taxing process. Our experienced team handles all logistical and regulatory requirements so your family can focus on grieving and healing.</p>
+          <h3 class="mt-4">What's Included</h3>
+          <div class="includes-list">
+            <div class="include-item"><span>✅</span><span>Local transportation from place of death</span></div>
+            <div class="include-item"><span>✅</span><span>Inter-state transportation coordination</span></div>
+            <div class="include-item"><span>✅</span><span>International repatriation (consular coordination)</span></div>
+            <div class="include-item"><span>✅</span><span>All permits and documentation</span></div>
+            <div class="include-item"><span>✅</span><span>Airline coordination and escort</span></div>
+            <div class="include-item"><span>✅</span><span>Receiving funeral home coordination</span></div>
+            <div class="include-item"><span>✅</span><span>24/7 logistical support</span></div>
+          </div>
+          <div class="mt-6">
+            <a href="tel:+18005551234" class="btn btn-primary">📞 Call Us for Transportation Help</a>
+          </div>
+        </div>
+        <div>
+          <div class="service-sidebar">
+            <div class="sidebar-title">Our Services</div>
+            <div class="sidebar-links">
+              <a class="sidebar-link" href="#" onclick="showPage('service-burial')">⚰️ Burial Services</a>
+              <a class="sidebar-link" href="#" onclick="showPage('service-cremation')">🕊️ Cremation Services</a>
+              <a class="sidebar-link" href="#" onclick="showPage('service-memorial')">🌸 Funeral &amp; Memorial</a>
+              <a class="sidebar-link active" href="#" onclick="showPage('service-transport')">✈️ Transportation</a>
+              <a class="sidebar-link" href="#" onclick="showPage('service-embalming')">💐 Embalming</a>
+              <a class="sidebar-link" href="#" onclick="showPage('livestream')">📡 Live Streaming</a>
+            </div>
+            <div style="margin-top:2rem;padding:1.5rem;background:var(--navy);border-radius:6px;text-align:center;">
+              <a href="tel:+18005551234" class="btn btn-primary btn-sm" style="width:100%;justify-content:center;">📞 951 251 1474</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- ============================================================
+     INDIVIDUAL SERVICE: EMBALMING
+     ============================================================ -->
+<section class="page-section" id="pg-service-embalming">
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="#" onclick="showPage('home')">Home</a><span>/</span><a href="#" onclick="showPage('services')">Services</a><span>/</span><span>Embalming</span></div>
+      <h1>Embalming &amp; Preparation</h1>
+      <div class="gold-line"></div>
+      <p>Professional preparation services, ensuring your loved one is cared for with the greatest respect and dignity.</p>
+    </div>
+  </div>
+  <section class="section">
+    <div class="container">
+      <div class="service-page-content">
+        <div>
+          <span class="section-label">Overview</span>
+          <h2>Caring Preparation with Dignity</h2>
+          <div class="gold-line gold-line--left"></div>
+          <p>Our licensed embalmers and preparation specialists treat every individual in their care with profound respect. Embalming provides preservation for viewing and services, allowing families the time they need to gather and say goodbye in a peaceful setting.</p>
+          <h3 class="mt-4">What's Included</h3>
+          <div class="includes-list">
+            <div class="include-item"><span>✅</span><span>Professional embalming by licensed specialists</span></div>
+            <div class="include-item"><span>✅</span><span>Cosmetic restoration and care</span></div>
+            <div class="include-item"><span>✅</span><span>Dressing and casketing</span></div>
+            <div class="include-item"><span>✅</span><span>Hair styling and grooming</span></div>
+            <div class="include-item"><span>✅</span><span>Refrigeration option (if preferred)</span></div>
+            <div class="include-item"><span>✅</span><span>Preparation of identification</span></div>
+          </div>
+          <h3 class="mt-4">Optional Add-Ons</h3>
+          <div class="addons-grid">
+            <div class="addon-item">💄 Advanced cosmetics</div>
+            <div class="addon-item">👗 Clothing dressing assistance</div>
+            <div class="addon-item">📸 Memory portrait photo</div>
+            <div class="addon-item">💅 Manicure / personal grooming</div>
+          </div>
+          <div class="mt-6">
+            <a href="tel:+18005551234" class="btn btn-primary">📞 Speak With Our Team</a>
+          </div>
+        </div>
+        <div>
+          <div class="service-sidebar">
+            <div class="sidebar-title">Our Services</div>
+            <div class="sidebar-links">
+              <a class="sidebar-link" href="#" onclick="showPage('service-burial')">⚰️ Burial Services</a>
+              <a class="sidebar-link" href="#" onclick="showPage('service-cremation')">🕊️ Cremation Services</a>
+              <a class="sidebar-link" href="#" onclick="showPage('service-memorial')">🌸 Funeral &amp; Memorial</a>
+              <a class="sidebar-link" href="#" onclick="showPage('service-transport')">✈️ Transportation</a>
+              <a class="sidebar-link active" href="#" onclick="showPage('service-embalming')">💐 Embalming</a>
+              <a class="sidebar-link" href="#" onclick="showPage('livestream')">📡 Live Streaming</a>
+            </div>
+            <div style="margin-top:2rem;padding:1.5rem;background:var(--navy);border-radius:6px;text-align:center;">
+              <a href="tel:+18005551234" class="btn btn-primary btn-sm" style="width:100%;justify-content:center;">📞 951 251 1474</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+
+<!-- ============================================================
+     OBITUARIES PAGE
+     ============================================================ -->
+<section class="page-section" id="pg-obituaries">
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="#" onclick="showPage('home')">Home</a><span>/</span><span>Obituaries</span></div>
+      <h1>Obituaries</h1>
+      <div class="gold-line"></div>
+      <p>Honoring the memories of those who have touched our lives. Browse recent obituaries and leave a message of condolence.</p>
+    </div>
+  </div>
+ <section class="section">
+  <div class="container">
+    <div class="obit-grid">
+      <div class="obit-card" onclick="showPage('obit-single')">
+        <div class="obit-photo"><img src="whitfield.jpg" alt="Harold James Whitfield" style="width:100%;height:100%;object-fit:cover;"></div>
+        <div class="obit-body">
+          <div class="obit-name">Harold James Whitfield</div>
+          <div class="obit-dates">March 14, 1942 April 3, 2026</div>
+          <p class="obit-excerpt">Harold was a devoted husband, father of three, and a beloved member of the Portland community for over 60 years. A retired engineer with a passion for woodworking and the outdoors...</p>
+          <a href="#" class="service-link" onclick="event.stopPropagation();showPage('obit-single')">Read Full Obituary →</a>
+        </div>
+      </div>
+      <div class="obit-card" onclick="showPage('obit-single')">
+        <div class="obit-photo"><img src="fontaine.jpg" alt="Eleanor Grace Fontaine" style="width:100%;height:100%;object-fit:cover;"></div>
+        <div class="obit-body">
+          <div class="obit-name">Eleanor Grace Fontaine</div>
+          <div class="obit-dates">July 2, 1938 March 28, 2026</div>
+          <p class="obit-excerpt">Eleanor was a retired school teacher who dedicated 35 years to education. Known for her warmth and infectious smile, she is remembered by hundreds of former students and her loving family...</p>
+          <a href="#" class="service-link" onclick="event.stopPropagation();showPage('obit-single')">Read Full Obituary →</a>
+        </div>
+      </div>
+      <div class="obit-card" onclick="showPage('obit-single')">
+        <div class="obit-photo"><img src="calloway.jpg" alt="Thomas Ray Calloway" style="width:100%;height:100%;object-fit:cover;"></div>
+        <div class="obit-body">
+          <div class="obit-name">Thomas Ray Calloway</div>
+          <div class="obit-dates">November 9, 1955 April 10, 2026</div>
+          <p class="obit-excerpt">Thomas was a veteran of the United States Army and a dedicated community volunteer. His commitment to service both in uniform and in civilian life left a lasting impact...</p>
+          <a href="#" class="service-link" onclick="event.stopPropagation();showPage('obit-single')">Read Full Obituary →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</section>
+
+<!-- ============================================================
+     INDIVIDUAL OBITUARY PAGE
+     ============================================================ -->
+<section class="page-section" id="pg-obit-single">
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="#" onclick="showPage('home')">Home</a><span>/</span><a href="#" onclick="showPage('obituaries')">Obituaries</a><span>/</span><span>Harold Whitfield</span></div>
+      <div class="obit-single-header">
+        <div class="obit-portrait"><img src="calloway.jpg" alt="Thomas Ray Calloway" style="width:100%;height:100%;object-fit:cover;"></div>
+        <div class="obit-single-name">Harold James Whitfield</div>
+        <div class="obit-single-dates">March 14, 1942 April 3, 2026</div>
+      </div>
+    </div>
+  </div>
+  <section class="section">
+    <div class="container">
+      <div class="obit-content">
+        <span class="section-label">Life Story</span>
+        <h2>In Loving Memory</h2>
+        <div class="gold-line gold-line--left"></div>
+        <p>Harold James Whitfield, age 84, of Portland, Oregon, passed away peacefully on April 3, 2026, surrounded by his loving family. Born on March 14, 1942, in Eugene, Oregon, Harold spent his entire life dedicated to his family, his community, and his craft.</p>
+        <p class="mt-2">A graduate of the University of Oregon, Harold built a distinguished career as a civil engineer with the City of Portland for over 30 years. After retirement, he devoted himself to woodworking, creating intricate furniture pieces that now live in the homes of family and friends across the country.</p>
+        <p class="mt-2">Harold is survived by his beloved wife of 58 years, Dorothy; his three children, Michael (Sarah), Christine (David), and Robert; and six cherished grandchildren. He was preceded in death by his parents, James and Martha Whitfield.</p>
+
+        <div class="obit-service-details mt-4">
+          <h3>Service Details</h3>
+          <div class="contact-detail">
+            <span class="ic">📅</span>
+            <div class="contact-detail-text">
+              <div class="label" style="color:var(--gold);">Visitation</div>
+              <div class="value" style="color:var(--text-body);">Friday, April 11, 2026 | 2:00 PM – 6:00 PM<br>Eternal Rest Memorial Chapel</div>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <span class="ic">⛪</span>
+            <div class="contact-detail-text">
+              <div class="label" style="color:var(--gold);">Funeral Service</div>
+              <div class="value" style="color:var(--text-body);">Saturday, April 12, 2026 | 10:00 AM<br>Eternal Rest Memorial Chapel</div>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <span class="ic"></span>
+            <div class="contact-detail-text">
+              <div class="label" style="color:var(--gold);">Burial</div>
+              <div class="value" style="color:var(--text-body);"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="obit-cta">
+          <a href="#" class="btn btn-primary">🌹 Send Flowers</a>
+          <a href="#" class="btn btn-navy">❤️ Make a Donation</a>
+          <a href="#" class="btn btn-outline" style="border-color:var(--navy);color:var(--navy);">📤 Share Obituary</a>
+        </div>
+
+        <div class="guestbook mt-6">
+          <h3>Guestbook</h3>
+          <p style="font-size:0.9rem;color:var(--gray-500);">Leave a message of comfort for the family of Harold Whitfield.</p>
+
+          <div class="guestbook-form mt-3">
+            <h4 style="margin-bottom:1.25rem;">Sign the Guestbook</h4>
+            <div class="form-grid">
+              <div class="form-group"><label>Your Name</label><input type="text" placeholder="Full name"></div>
+              <div class="form-group"><label>Location</label><input type="text" placeholder="City, State"></div>
+              <div class="form-group full"><label>Your Message</label><textarea placeholder="Share a memory or words of condolence..."></textarea></div>
+            </div>
+            <button class="btn btn-navy mt-3" onclick="alert('Thank you for your message of condolence.')">Submit Message</button>
+          </div>
+
+          <div class="guestbook-entries">
+            <div class="guestbook-entry">
+              <div class="entry-author">Susan Collins</div>
+              <div class="entry-date">Portland, OR April 5, 2026</div>
+              <p class="entry-text">"Harold was one of the finest men I've ever known. He was a dear friend and neighbor for over 30 years. My thoughts are with Dorothy and the entire family during this time."</p>
+            </div>
+            <div class="guestbook-entry">
+              <div class="entry-author">The Morrison Family</div>
+              <div class="entry-date">Eugene, OR April 4, 2026</div>
+              <p class="entry-text">"We will always remember Harold's warm laughter and his beautiful woodwork. He gave our family a dining table as a wedding gift that we will treasure forever. Rest in peace, Harold."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+
+<!-- ============================================================
+     PRE-PLANNING PAGE
+     ============================================================ -->
+<section class="page-section" id="pg-preplanning">
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="#" onclick="showPage('home')">Home</a><span>/</span><span>Pre-Planning</span></div>
+      <h1>Pre-Plan Your Arrangements</h1>
+      <div class="gold-line"></div>
+      <p>One of the most loving gifts you can give your family is planning ahead sparing them difficult decisions during an already painful time.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <span class="section-label">Why Plan Ahead</span>
+      <h2 style="max-width:600px;">Give Your Family the Gift of Peace of Mind</h2>
+      <div class="gold-line gold-line--left"></div>
+      <p style="max-width:640px;">Pre-planning your funeral arrangements is one of the most thoughtful things you can do. It ensures your wishes are honored exactly as you intend — and relieves your loved ones of making difficult decisions while grieving.</p>
+      <div class="benefits-grid mt-6">
+        <div class="benefit-card">
+          <div class="benefit-icon">💛</div>
+          <h4>Protect Your Family</h4>
+          <p>Spare your loved ones from the stress and financial burden of making urgent decisions during a painful time.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">✍️</div>
+          <h4>Your Wishes, Your Way</h4>
+          <p>Ensure your personal preferences for the service, music, readings, and more are followed precisely.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">💰</div>
+          <h4>Lock In Today's Prices</h4>
+          <p>Pre-planning can lock in current prices, protecting your family from future cost increases.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🕊️</div>
+          <h4>Peace of Mind for You</h4>
+          <p>Knowing everything is in place brings a profound sense of calm and relief to many families.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">📋</div>
+          <h4>Organized Documents</h4>
+          <p>Your important documents, wishes, and preferences are stored safely and accessed easily when needed.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🤝</div>
+          <h4>Professional Guidance</h4>
+          <p>Our compassionate team walks you through every option with no pressure and complete transparency.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <span class="section-label">The Process</span>
+      <h2>How Pre-Planning Works</h2>
+      <div class="gold-line gold-line--left"></div>
+      <div class="preplanning-steps">
+        <div class="pp-step">
+          <div class="pp-step-num">1</div>
+          <div class="pp-step-content">
+            <h4>Schedule a Free Consultation</h4>
+            <p>Meet with one of our compassionate pre-planning specialists in person, by phone, or via video call. There is absolutely no obligation and no pressure.</p>
+          </div>
+        </div>
+        <div class="pp-step">
+          <div class="pp-step-num">2</div>
+          <div class="pp-step-content">
+            <h4>Share Your Wishes</h4>
+            <p>Tell us your preferences type of service, music, readings, burial or cremation, and any personal touches that would make the service meaningful to you.</p>
+          </div>
+        </div>
+        <div class="pp-step">
+          <div class="pp-step-num">3</div>
+          <div class="pp-step-content">
+            <h4>Review &amp; Select a Package</h4>
+            <p>We present clear, transparent options that fit your preferences and budget. No hidden fees, no pressure just honest guidance.</p>
+          </div>
+        </div>
+        <div class="pp-step">
+          <div class="pp-step-num">4</div>
+          <div class="pp-step-content">
+            <h4>Formalize &amp; Fund Your Plan</h4>
+            <p>We document your wishes and discuss funding options including pre-payment plans and insurance-funded policies to protect your family's financial future.</p>
+          </div>
+        </div>
+        <div class="pp-step">
+          <div class="pp-step-num">5</div>
+          <div class="pp-step-content">
+            <h4>Share the Plan with Your Family</h4>
+            <p>We help you communicate your arrangements to your family so they know exactly what to do and who to call when the time comes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="max-width:760px;">
+      <span class="section-label">Get Started</span>
+      <h2>Request a Free Pre-Planning Consultation</h2>
+      <div class="gold-line gold-line--left"></div>
+      <p>Complete the form below and one of our specialists will reach out within one business day. There is no obligation of any kind.</p>
+      <div class="form-section">
+        <div class="form-grid">
+          <div class="form-group"><label>First Name</label><input type="text" placeholder="Jane"></div>
+          <div class="form-group"><label>Last Name</label><input type="text" placeholder="Smith"></div>
+          <div class="form-group"><label>Phone Number</label><input type="tel" placeholder="(503) 555-0000"></div>
+          <div class="form-group"><label>Email Address</label><input type="email" placeholder="jane@email.com"></div>
+          <div class="form-group full">
+            <label>Preferred Contact Method</label>
+            <select><option>Phone Call</option><option>Email</option><option>Text Message</option></select>
+          </div>
+          <div class="form-group full">
+            <label>Service Preference</label>
+            <select><option>Not Sure Yet</option><option>Traditional Burial</option><option>Cremation</option><option>Green / Natural Burial</option><option>Other</option></select>
+          </div>
+          <div class="form-group full"><label>Any Questions or Special Wishes</label><textarea placeholder="Tell us a little about what you're looking for..."></textarea></div>
+        </div>
+        <button class="btn btn-primary mt-3" onclick="alert('Thank you! A specialist will contact you within one business day.')">Submit Request — No Obligation</button>
+      </div>
+    </div>
+  </section>
+</section>
+
+
+<!-- ============================================================
+     ABOUT PAGE
+     ============================================================ -->
+<section class="page-section" id="pg-about">
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="#" onclick="showPage('home')">Home</a><span>/</span><span>About Us</span></div>
+      <h1>About Eternal Rest Memorial</h1>
+      <div class="gold-line"></div>
+      <p>A family-owned funeral home serving the Portland community with compassion, dignity, and integrity since 1978.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="story-section">
+        <div class="story-img">🏛️</div>
+        <div>
+          <span class="section-label">Our Story</span>
+          <h2>Four Decades of Compassionate Service</h2>
+          <div class="gold-line gold-line--left"></div>
+          <p>Eternal Rest Memorial was founded in 1978 by Edward and Ruth Callahan, who believed that every family deserves to say goodbye to their loved one with dignity, respect, and personalized care — regardless of budget or background.</p>
+          <p class="mt-2">Today, the second generation of the Callahan family continues that mission. We have proudly served over 10,000 families throughout the Portland metropolitan area and beyond, building a reputation built entirely on trust, compassion, and professional excellence.</p>
+          <p class="mt-2">We are proud to be Oregon's most trusted family-owned funeral home.</p>
+          <div class="values-list mt-4">
+            <div class="value-item">
+              <span class="value-icon">🕊️</span>
+              <div class="value-text"><strong>Dignity in All We Do</strong><span>Every person in our care is treated with the same profound respect we would give our own family members.</span></div>
+            </div>
+            <div class="value-item">
+              <span class="value-icon">🤝</span>
+              <div class="value-text"><strong>Compassionate Service</strong><span>We walk alongside families through one of life's most difficult moments with empathy and genuine care.</span></div>
+            </div>
+            <div class="value-item">
+              <span class="value-icon">💡</span>
+              <div class="value-text"><strong>Transparency &amp; Integrity</strong><span>Honest, clear pricing and straightforward communication — always.</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Our Team</span>
+        <h2>Meet Our Compassionate Staff</h2>
+        <div class="gold-line"></div>
+      </div>
+      <div class="staff-grid">
+        <div class="staff-card">
+          <div class="staff-photo">👨‍💼</div>
+          <div class="staff-body">
+            <div class="staff-name">Michael Callahan</div>
+            <div class="staff-role">Director &amp; Owner</div>
+            <p class="staff-bio">Licensed funeral director with 22 years of experience. Michael leads our team with the same compassion his parents instilled from day one.</p>
+          </div>
+        </div>
+        <div class="staff-card">
+          <div class="staff-photo">👩‍💼</div>
+          <div class="staff-body">
+            <div class="staff-name">Christine Callahan</div>
+            <div class="staff-role">Co-Director &amp; Pre-Planning Specialist</div>
+            <p class="staff-bio">Christine oversees our pre-planning department and is passionate about helping families plan ahead with peace of mind.</p>
+          </div>
+        </div>
+        <div class="staff-card">
+          <div class="staff-photo">👨‍⚕️</div>
+          <div class="staff-body">
+            <div class="staff-name">Robert Jenkins</div>
+            <div class="staff-role">Licensed Embalmer</div>
+            <p class="staff-bio">Robert brings 18 years of professional preparation experience and an unwavering commitment to dignity and care.</p>
+          </div>
+        </div>
+        <div class="staff-card">
+          <div class="staff-photo">👩</div>
+          <div class="staff-body">
+            <div class="staff-name">Sandra Morales</div>
+            <div class="staff-role">Family Services Coordinator</div>
+            <p class="staff-bio">Sandra is often the first voice families hear in their most difficult moments warm, patient, and profoundly compassionate.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Credentials</span>
+        <h2>Certifications &amp; Memberships</h2>
+        <div class="gold-line"></div>
+      </div>
+      <div class="certs-grid mt-4">
+        <div class="cert-badge"><div class="ci">🏅</div><p>NFDA Member<br>National Funeral Directors Association</p></div>
+        <div class="cert-badge"><div class="ci">📋</div><p>State of Oregon<br>Licensed Funeral Home</p></div>
+        <div class="cert-badge"><div class="ci">⭐</div><p>BBB Accredited<br>A+ Rating Since 1985</p></div>
+        <div class="cert-badge"><div class="ci">🏆</div><p>Oregon Funeral Directors<br>Association Member</p></div>
+      </div>
+    </div>
+  </section>
+</section>
+
+
+<!-- ============================================================
+     CONTACT PAGE
+     ============================================================ -->
+<section class="page-section" id="pg-contact">
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="#" onclick="showPage('home')">Home</a><span>/</span><span>Contact</span></div>
+      <h1>Contact Us</h1>
+      <div class="gold-line"></div>
+      <p>We are available 24 hours a day, 7 days a week. Please do not hesitate to reach out we are here to help.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-page-grid">
+        <div>
+          <span class="section-label">Send a Message</span>
+          <h2>We'll Respond Promptly</h2>
+          <div class="gold-line gold-line--left"></div>
+          <div class="form-section" style="margin-top:2rem;">
+            <div class="form-grid">
+              <div class="form-group"><label>First Name</label><input type="text" placeholder="First name"></div>
+              <div class="form-group"><label>Last Name</label><input type="text" placeholder="Last name"></div>
+              <div class="form-group full"><label>Email Address</label><input type="email" placeholder="your@email.com"></div>
+              <div class="form-group full"><label>Phone Number</label><input type="tel" placeholder="(503) 555-0000"></div>
+              <div class="form-group full">
+                <label>Reason for Contact</label>
+                <select>
+                  <option>Immediate Arrangements Needed</option>
+                  <option>Pre-Planning Inquiry</option>
+                  <option>General Question</option>
+                  <option>Pricing Information</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="form-group full"><label>Message</label><textarea placeholder="How can we help you?"></textarea></div>
+            </div>
+            <button class="btn btn-primary mt-3" onclick="alert('Thank you. We will be in touch with you shortly.')">Send Message</button>
+          </div>
+        </div>
+        <div>
+          <span class="section-label">Get in Touch</span>
+          <h2>Contact Information</h2>
+          <div class="gold-line gold-line--left"></div>
+          <div class="mt-4">
+            <div class="contact-detail">
+              <span class="ic">📞</span>
+              <div class="contact-detail-text">
+                <div class="label">Phone (24/7)</div>
+                <div class="value"><a href="tel:+18005551234" style="color:var(--gold);font-size:1.2rem;font-weight:700;">951 251 1474</a></div>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <span class="ic">✉️</span>
+              <div class="contact-detail-text">
+                <div class="label">Email</div>
+                <div class="value"><a href="mailto:support@eternalrestmemorial.com">support@eternalrestmemorial.com</a></div>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <span class="ic"></span>
+              <div class="contact-detail-text">
+                <div class="label"></div>
+                <div class="value"><br></div>
+              </div>
+            </div>
+          </div>
+          <h4 class="mt-4" style="margin-bottom:0.75rem;">Business Hours</h4>
+          <p style="font-size:0.85rem;color:var(--gray-500);margin-bottom:0.75rem;">Office staff available:</p>
+          <table class="hours-table">
+            <tr><td>Monday – Friday</td><td>8:00 AM – 6:00 PM</td></tr>
+            <tr><td>Saturday</td><td>9:00 AM – 4:00 PM</td></tr>
+            <tr><td>Sunday</td><td>10:00 AM – 2:00 PM</td></tr>
+          </table>
+          <div class="emergency-notice">
+            <h4>🚨 24/7 Emergency Line</h4>
+            <p>For immediate assistance at any hour of the day or night, please call our emergency line: <a href="tel:+18005551234">951 251 1474</a>. A funeral director is always on call.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="contact-snippet" style="margin-top:0;">
+    <div class="contact-map">
+    </div>
+    <div class="contact-info">
+      <h3 style="color:var(--white);">Visit Our Facility</h3>
+      <p style="color:rgba(255,255,255,0.65);margin-bottom:2rem;">Our peaceful, welcoming facility is designed to provide comfort and serenity during your visit.</p>
+      <a href="https://maps.google.com" target="_blank" class="btn btn-primary">Get Directions →</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     WHAT TO DO WHEN DEATH OCCURS
+     ============================================================ -->
+<section class="page-section" id="pg-death-occurs">
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="#" onclick="showPage('home')">Home</a><span>/</span><span>What To Do</span></div>
+      <h1>What To Do When a Death Occurs</h1>
+      <div class="gold-line"></div>
+      <p>We know this is an overwhelming time. Here is a clear, step-by-step guide and we are available right now to walk you through everything.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container" style="max-width:860px;">
+      <div style="background:var(--navy);padding:2rem;border-radius:8px;text-align:center;margin-bottom:3rem;">
+        <p style="color:rgba(255,255,255,0.75);margin-bottom:0.75rem;font-size:1rem;">If you need immediate help right now, please call us:</p>
+        <a href="tel:+18005551234" style="font-family:var(--font-serif);font-size:2.5rem;color:var(--gold);">951 251 1474</a>
+        <p style="color:rgba(255,255,255,0.5);font-size:0.78rem;margin-top:0.5rem;">Available 24 hours a day, 7 days a week</p>
+      </div>
+
+      <span class="section-label">Step-by-Step Guide</span>
+      <h2>Your First Steps</h2>
+      <div class="gold-line gold-line--left"></div>
+      <div class="death-steps">
+        <div class="death-step">
+          <div class="death-step-num">1</div>
+          <div class="death-step-body">
+            <h3>Ensure Safety &amp; Call for Help</h3>
+            <p>If the death was sudden or unexpected, call 911 immediately. If the death occurred under hospice or medical supervision, call the attending nurse or hospice care provider. Do not move the body until authorized personnel arrive.</p>
+          </div>
+        </div>
+        <div class="death-step">
+          <div class="death-step-num">2</div>
+          <div class="death-step-body">
+            <h3>Notify Close Family &amp; Loved Ones</h3>
+            <p>Contact the immediate family members and those who were closest to the deceased. Allow yourself and others time to be present in this moment. There is no need to rush.</p>
+          </div>
+        </div>
+        <div class="death-step">
+          <div class="death-step-num">3</div>
+          <div class="death-step-body">
+            <h3>Call Eternal Rest Memorial</h3>
+            <p>Call us at <a href="tel:+18005551234" style="color:var(--gold);">951 251 1474</a> any time of day or night. Our funeral director on call will guide you through every next step, arrange for transportation of your loved one, and relieve you of the burden of coordination.</p>
+          </div>
+        </div>
+        <div class="death-step">
+          <div class="death-step-num">4</div>
+          <div class="death-step-body">
+            <h3>Locate Important Documents</h3>
+            <p>When you are able, gather the following documents. Our team will let you know exactly which ones are needed and when — there is no immediate rush in most situations.</p>
+            <div class="docs-grid mt-2">
+              <div class="doc-item">📋 Death certificate (issued by physician)</div>
+              <div class="doc-item">🆔 Government-issued ID</div>
+              <div class="doc-item">📄 Social Security card / number</div>
+              <div class="doc-item">📜 Will or trust documents</div>
+              <div class="doc-item">🏥 Insurance policies</div>
+              <div class="doc-item">🎖️ Military discharge papers (DD-214)</div>
+              <div class="doc-item">💳 Pre-arrangement records (if applicable)</div>
+              <div class="doc-item">🏦 Bank &amp; financial account information</div>
+              <div class="doc-item">🧾 Recent tax returns</div>
+            </div>
+          </div>
+        </div>
+        <div class="death-step">
+          <div class="death-step-num">5</div>
+          <div class="death-step-body">
+            <h3>Notify Relevant Organizations</h3>
+            <p>When you are ready, notify Social Security Administration, life insurance companies, the deceased's employer, banks and financial institutions, and any government benefit programs. Our team can provide guidance on each of these steps.</p>
+          </div>
+        </div>
+        <div class="death-step">
+          <div class="death-step-num">6</div>
+          <div class="death-step-body">
+            <h3>Plan the Arrangements</h3>
+            <p>Our compassionate funeral directors will sit with you and your family to plan a service that truly honors your loved one. From burial or cremation to the personal touches that celebrate a life — we handle everything.</p>
+          </div>
+        </div>
+      </div>
+      <div class="cta-banner mt-6" style="border-radius:8px;">
+        <div class="container">
+          <h2>We Are Here Right Now</h2>
+          <p>You do not have to face this alone. Call us at any hour and we will guide you through each step with compassion.</p>
+          <div class="actions"><a href="tel:+18005551234" class="btn btn-primary">📞 Call 951 251 1474</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+
+<!-- ============================================================
+     PRICING PAGE
+     ============================================================ -->
+<section class="page-section" id="pg-pricing">
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="#" onclick="showPage('home')">Home</a><span>/</span><span>Pricing</span></div>
+      <h1>Transparent Pricing</h1>
+      <div class="gold-line"></div>
+      <p>No hidden fees. No surprises. Clear, honest pricing so you can make decisions with confidence during a difficult time.</p>
+    </div>
+  </div>
+  <section class="section">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Service Packages</span>
+        <h2>Choose the Right Package for Your Family</h2>
+        <div class="gold-line"></div>
+        <p style="max-width:540px;margin:0 auto 0.5rem;">All packages can be customized. Our team is happy to build a plan that fits your needs and budget perfectly.</p>
+      </div>
+      <div class="pricing-grid">
+        <div class="price-card">
+          <div class="price-head">
+            <div class="price-label">Simple &amp; Dignified</div>
+            <div class="price-name">Essential Care</div>
+            <div class="price-amount"><sup>$</sup>1,595</div>
+            <span class="price-from">Starting from</span>
+          </div>
+          <div class="price-body">
+            <ul>
+              <li><span class="chk">✓</span> Direct cremation</li>
+              <li><span class="chk">✓</span> Transportation of deceased</li>
+              <li><span class="chk">✓</span> Death certificate filing (1 copy)</li>
+              <li><span class="chk">✓</span> Basic urn included</li>
+              <li><span class="chk">✓</span> 24/7 family support</li>
+              <li><span class="chk">✓</span> Secure chain of custody</li>
+            </ul>
+          </div>
+          <div class="price-footer">
+            <a href="tel:+18005551234" class="btn btn-navy" style="width:100%;justify-content:center;">Contact Us</a>
+            <p class="price-note">Pricing may vary. Contact us for a detailed quote.</p>
+          </div>
+        </div>
+        <div class="price-card best">
+          <div class="price-head">
+            <div class="price-label">Most Popular Choice</div>
+            <div class="price-name">Traditional Service</div>
+            <div class="price-amount"><sup>$</sup>4,250</div>
+            <span class="price-from">Starting from</span>
+          </div>
+          <div class="price-body">
+            <ul>
+              <li><span class="chk">✓</span> Full funeral ceremony</li>
+              <li><span class="chk">✓</span> Casket (mid-range selection)</li>
+              <li><span class="chk">✓</span> Visitation / viewing</li>
+              <li><span class="chk">✓</span> Cemetery coordination</li>
+              <li><span class="chk">✓</span> Death certificates (3 copies)</li>
+              <li><span class="chk">✓</span> Clergy / officiant coordination</li>
+              <li><span class="chk">✓</span> Obituary placement</li>
+              <li><span class="chk">✓</span> Memorial programs (50 printed)</li>
+              <li><span class="chk">✓</span> 24/7 family support</li>
+            </ul>
+          </div>
+          <div class="price-footer">
+            <a href="tel:+18005551234" class="btn btn-primary" style="width:100%;justify-content:center;">Contact Us</a>
+            <p class="price-note">Pricing may vary. Contact us for a detailed quote.</p>
+          </div>
+        </div>
+        <div class="price-card">
+          <div class="price-head">
+            <div class="price-label">A Complete Tribute</div>
+            <div class="price-name">Premium Memorial</div>
+            <div class="price-amount"><sup>$</sup>8,500</div>
+            <span class="price-from">Starting from</span>
+          </div>
+          <div class="price-body">
+            <ul>
+              <li><span class="chk">✓</span> Everything in Traditional</li>
+              <li><span class="chk">✓</span> Premium casket selection</li>
+              <li><span class="chk">✓</span> Live streaming service</li>
+              <li><span class="chk">✓</span> Floral arrangements</li>
+              <li><span class="chk">✓</span> Memorial video slideshow</li>
+              <li><span class="chk">✓</span> Catering coordination</li>
+              <li><span class="chk">✓</span> Grief support resources</li>
+              <li><span class="chk">✓</span> Death certificates (5 copies)</li>
+              <li><span class="chk">✓</span> Custom keepsake items</li>
+            </ul>
+          </div>
+          <div class="price-footer">
+            <a href="tel:+18005551234" class="btn btn-navy" style="width:100%;justify-content:center;">Contact Us</a>
+            <p class="price-note">Pricing may vary. Contact us for a detailed quote.</p>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-6" style="padding:2rem;background:var(--gray-100);border-radius:8px;">
+        <p style="color:var(--gray-700);font-size:0.9rem;margin-bottom:1rem;">All prices listed are starting prices. Final pricing depends on specific selections, cemetery fees, and additional services. We are required by law (FTC Funeral Rule) to provide you with an itemized price list upon request.</p>
+        <a href="tel:+18005551234" class="btn btn-primary">📞 Request a Detailed Price List</a>
+      </div>
+    </div>
+  </section>
+</section>
+
+
+<!-- ============================================================
+     LIVE STREAMING PAGE
+     ============================================================ -->
+<section class="page-section" id="pg-livestream">
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="#" onclick="showPage('home')">Home</a><span>/</span><a href="#" onclick="showPage('services')">Services</a><span>/</span><span>Live Streaming</span></div>
+      <h1>Live Streaming Services</h1>
+      <div class="gold-line"></div>
+      <p>Allow family and friends from anywhere in the world to participate in your loved one's service through professional, easy-to-use live broadcast.</p>
+    </div>
+  </div>
+  <section class="section">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">How It Works</span>
+        <h2>Simple, Professional, &amp; Reliable</h2>
+        <div class="gold-line"></div>
+        <p style="max-width:580px;margin:0 auto;">We handle everything — setup, broadcast, and recording so you can focus entirely on being present with your family.</p>
+      </div>
+      <div class="stream-how">
+        <div class="stream-step">
+          <div class="stream-step-num">1</div>
+          <h4>We Set Everything Up</h4>
+          <p>Our team sets up professional-grade cameras and audio equipment in the service space at no inconvenience to your family.</p>
+        </div>
+        <div class="stream-step">
+          <div class="stream-step-num">2</div>
+          <h4>Share the Private Link</h4>
+          <p>We provide a simple, private link that can be shared with remote attendees via email or text message.</p>
+        </div>
+        <div class="stream-step">
+          <div class="stream-step-num">3</div>
+          <h4>Loved Ones Watch Live</h4>
+          <p>Remote attendees join from any device phone, tablet, or computer with no account or downloads required.</p>
+        </div>
+      </div>
+
+      <div class="mt-6">
+        <span class="section-label">Platforms</span>
+        <h3>Available Platforms</h3>
+        <div class="gold-line gold-line--left"></div>
+        <p>We support multiple platforms so attendees can use whatever is most comfortable for them.</p>
+        <div class="platforms mt-3">
+          <div class="platform-badge">📹 Zoom</div>
+          <div class="platform-badge">▶️ YouTube Live (Private)</div>
+          <div class="platform-badge">📘 Facebook Live (Private)</div>
+          <div class="platform-badge">🎥 Custom Secure Stream</div>
+        </div>
+      </div>
+
+      <div class="grid-2 mt-6">
+        <div style="padding:2.5rem;background:var(--gray-100);border-radius:8px;">
+          <h3>What's Included</h3>
+          <div class="includes-list mt-2">
+            <div class="include-item"><span>✅</span><span>Professional HD camera setup</span></div>
+            <div class="include-item"><span>✅</span><span>Clear, high-quality audio</span></div>
+            <div class="include-item"><span>✅</span><span>Private, secure streaming link</span></div>
+            <div class="include-item"><span>✅</span><span>Live technician oversight during service</span></div>
+            <div class="include-item"><span>✅</span><span>Recording for later viewing (30 days)</span></div>
+          </div>
+        </div>
+        <div style="padding:2.5rem;background:var(--navy);border-radius:8px;display:flex;flex-direction:column;justify-content:center;text-align:center;">
+          <h3 style="color:var(--white);margin-bottom:0.75rem;">Add Streaming to Any Service</h3>
+          <p style="color:rgba(255,255,255,0.65);margin-bottom:2rem;">Contact us to include live streaming in your service package.</p>
+          <a href="tel:+18005551234" class="btn btn-primary" style="justify-content:center;">📞 Call 951 251 1474</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+
+</div><!-- /page -->
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <span class="logo-name" style="color:var(--white);">Eternal Rest Memorial</span>
+          <span class="logo-tag">Funeral Home &amp; Cremation</span>
+        </div>
+        <p class="footer-tagline">Serving families with compassion, dignity, and integrity since 1978. Available 24 hours a day, every day of the year.</p>
+        <div class="footer-contact-items">
+      
+          <div class="footer-contact-item">📞 <a href="tel:+18005551234">951 251 1474</a></div>
+          <div class="footer-contact-item">✉️ <a href="mailto:support@eternalrestmemorial.com">support@eternalrestmemorial.com</a></div>
+        </div>
+        <div class="social-links mt-3">
+          <a class="social-link" href="#" aria-label="Facebook">𝑓</a>
+          <a class="social-link" href="#" aria-label="Instagram">◻</a>
+          <a class="social-link" href="#" aria-label="YouTube">▶</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#" onclick="showPage('service-burial')">Burial Services</a></li>
+          <li><a href="#" onclick="showPage('service-cremation')">Cremation Services</a></li>
+          <li><a href="#" onclick="showPage('service-memorial')">Funeral &amp; Memorial</a></li>
+          <li><a href="#" onclick="showPage('service-transport')">Transportation</a></li>
+          <li><a href="#" onclick="showPage('service-embalming')">Embalming</a></li>
+          <li><a href="#" onclick="showPage('livestream')">Live Streaming</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="#" onclick="showPage('home')">Home</a></li>
+          <li><a href="#" onclick="showPage('obituaries')">Obituaries</a></li>
+          <li><a href="#" onclick="showPage('preplanning')">Pre-Planning</a></li>
+          <li><a href="#" onclick="showPage('about')">About Us</a></li>
+          <li><a href="#" onclick="showPage('pricing')">Pricing</a></li>
+          <li><a href="#" onclick="showPage('death-occurs')">What To Do</a></li>
+          <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Immediate Help</h5>
+        <div style="background:rgba(184,151,90,0.12);border:1px solid rgba(184,151,90,0.3);border-radius:8px;padding:1.5rem;text-align:center;">
+          <p style="color:rgba(255,255,255,0.65);font-size:0.85rem;margin-bottom:0.75rem;">Available 24/7 — call us now:</p>
+          <a href="tel:+18005551234" style="font-family:var(--font-serif);font-size:1.6rem;color:var(--gold);display:block;margin-bottom:1rem;">951 251 1474</a>
+          <a href="#" class="btn btn-primary btn-sm" style="width:100%;justify-content:center;" onclick="showPage('contact')">Get Help Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Eternal Rest Memorial Funeral Home &amp; Cremation. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Accessibility</a>
+        <a href="#">FTC Funeral Rule</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ===== PAGE NAVIGATION =====
+function showPage(id) {
+  document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
+  const target = document.getElementById('pg-' + id);
+  if (target) {
+    target.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+}
+
+// ===== MOBILE MENU =====
+const menuToggle = document.getElementById('menuToggle');
+const mobileNav  = document.getElementById('mobileNav');
+menuToggle.addEventListener('click', () => {
+  mobileNav.classList.toggle('open');
+});
+function closeMobile() { mobileNav.classList.remove('open'); }
+
+// ===== HEADER SCROLL =====
+window.addEventListener('scroll', () => {
+  document.getElementById('header').classList.toggle('scrolled', window.scrollY > 40);
+});
+
+// ===== CLICK OUTSIDE MOBILE MENU =====
+document.addEventListener('click', (e) => {
+  if (!mobileNav.contains(e.target) && !menuToggle.contains(e.target)) {
+    closeMobile();
+  }
+});
+</script>
+</body>
+</html>
